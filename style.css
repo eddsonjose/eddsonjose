@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+canvas {
+  margin: 0;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  z-index: -1;
+}
+
+/* ---------------------------------------------------------------------- */
+/* -------------------------------header--------------------------------- */
+
+/* .row {
+  background-color: #efefef;
+} */
+.row h1:hover {
+  color: black;
+}
+.column {
+  float: left;
+  padding: 20px;
+}
+.left {
+  text-align: right;
+  width: 45%;
+  padding: 3px;
+}
+.right {
+  text-align: left;
+  width: 45%;
+  padding: 3px;
+}
+.middle {
+  text-align: center;
+  width: 10%;
+  padding: 10px;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* ---------------------------------------------------------------------- */
+/* --------------------------------text---------------------------------- */
+
+h1 {
+  color: #969696;
+  font-family: 'Cabin', sans-serif;
+  /* font-family: 'Ubuntu', sans-serif; */
+  font-size: 12px;
+  display: inline-block;
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+
+p {
+  font-family: 'Cabin', sans-serif;
+  font-size: 12px;
+  text-align: center;
+  padding: 10px 300px;
+  position: absolute;
+  top: 75%;
+  left: 0px;
+  color: black;
+}
+
+a:link {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  color: blue;
+}
+
+/* ---------------------------------------------------------------------- */
+/* ------------------------------favicon--------------------------------- */
+
+img {
+  text-align: center;
+}
