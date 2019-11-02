@@ -58,38 +58,19 @@ canvas {
   padding-bottom: 15px;
 }
 /* ---------------------------------------------------------------------- */
-/* -------------------------------gallery-------------------------------- */
-/* .work {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 25px;
-  width: 50%;
-}
-.work:hover img {
-  opacity: 0.1;
+/* --------------------------Personal Statement-------------------------- */
+.statement {
   width: 100%;
-}
-.work:hover .overlay {
-  opacity: 1;
-  transition: .5s ease;
-}
-.overlay {
-  color: #969696;
-  font-family: 'Cabin', sans-serif;
-  font-size: 12px;
-  letter-spacing: 2px;
-  font-weight: 400;
   text-align: center;
-
-  width: 45%;
-  position: absolute;
-  top: 0;
+}
+.paragraph {
+  position: relative;
+  width: 50%;
   left: 25%;
-  opacity: 0;
-  transition: .5s ease;
-  transform: translate(0, -130%);
-} */
+  right: 25%;
+}
+/* ---------------------------------------------------------------------- */
+/* -------------------------------gallery-------------------------------- */
 .gallery {
   width: 100%;
 }
@@ -202,8 +183,10 @@ a:hover {
 /* ---------------------------------------------------------------------- */
 /* ----------------------------last update------------------------------- */
 .lastUpdate {
+  position: relative;
   display: block;
   padding-right: 10px;
+  right: 0;
   bottom: 0;
   text-align: right;
 }
