@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: #ffffff;
+  background-color: #ebebeb;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -20,180 +20,146 @@ canvas {
   z-index: -1;
 }
 /* ---------------------------------------------------------------------- */
-/* -------------------------------header--------------------------------- */
+/* ---------------------------header & footer---------------------------- */
 
 /* .row {
   background-color: #efefef;
 } */
-.header h1:hover {
+.center_column {
+  text-align: center;
+}
+.center_column h1:hover {
+  color: grey;
+}
+.center_column h2:hover {
   color: black;
 }
-.column {
-  float: left;
-  padding: 20px;
-}
-.left {
-  text-align: right;
-  width: 45%;
-  padding: 3px;
-}
-.right {
-  text-align: left;
-  width: 45%;
-  padding: 3px;
-}
-.middle {
+.header_main_link {
   text-align: center;
-  width: 10%;
-  padding: 10px;
 }
-.header:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.title {
+.header_sub_link {
   text-align: center;
-  padding-bottom: 15px;
 }
-/* ---------------------------------------------------------------------- */
-/* --------------------------Personal Statement-------------------------- */
-.statement {
+.homepage_image {
+  text-align: center;
+  padding: 2em;
+}
+.homepage_text {
+  text-align: center;
+  padding-left: 30%;
+  padding-right: 30%;
+}
+.footer {
+  position: static;
+  text-align: center;
   width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  bottom: 20px;
+}
+.empty {
+  padding: 2em;
+}
+img {
   text-align: center;
-}
-.paragraph {
-  position: relative;
-  width: 50%;
-  left: 25%;
-  right: 25%;
-}
-/* ---------------------------------------------------------------------- */
-/* -------------------------------gallery-------------------------------- */
-.gallery {
   width: 100%;
+  padding-left: 0em;
 }
-.work {
-  position: relative;
-  left: 30%;
-  right: 30%;
-  width: 40%;
-}
-.image {
-  display: block;
-}
-.overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: 1s ease;
-  background-color: white;
-}
-.work:hover .overlay {
-  opacity: 0.9;
-}
-.text {
-  color: #969696;
-  font-family: 'Cabin', sans-serif;
-  font-size: 12px;
-  letter-spacing: 2px;
-  font-weight: 400;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 90%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-.artTitle {
-  color: #969696;
-  font-family: 'Cabin', sans-serif;
-  font-size: 12px;
-  letter-spacing: 2px;
-  font-weight: 400;
-  text-align: center;
-  padding-top: 5px;
-  padding-bottom: 20px;
-}
-/*
-.video-container {
-	position:relative;
-	padding-bottom:56.25%;
-	padding-top:30px;
-	height:0;
-	overflow:hidden;
-}
-.video-container iframe, .video-container object, .video-container embed {
-	position:absolute;
-	top:0;
-	left:0;
-	width:100%;
-	height:100%;
-} */
-/* ---------------------------------------------------------------------- */
-/* --------------------------------text---------------------------------- */
 h1 {
-  color: #969696;
-  font-family: 'Cabin', sans-serif;
-  font-size: 12px;
-  display: inline-block;
-  letter-spacing: 2px;
-  font-weight: 400;
-}
-
-p {
-  color: #969696;
-  font-family: 'Cabin', sans-serif;
-  font-size: 12px;
-  text-align: left;
-  /* padding: 10px 300px; */
-  position: absolute;
-  /* top: 75%;
-  left: 0px; */
+  color: black;
+  font-family: 'Roboto', sans-serif;
+  font-size: 32px;
   display: block;
   letter-spacing: 2px;
-  font-weight: 400;
+  font-weight: 100;
+  text-align: center;
 }
 
+h2 {
+  color: #696969;
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  display: block;
+  letter-spacing: 2px;
+  font-weight: 300;
+  text-align: center;
+  margin-left: 45px;
+  margin-right: 45px;
+}
+h3 {
+  color: #696969;
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  display: block;
+  letter-spacing: 2px;
+  font-weight: 300;
+  text-align: center;
+  margin-left: 45px;
+  margin-right: 45px;
+}
+h4 {
+  color: blue;
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  display: block;
+  letter-spacing: 2px;
+  font-weight: 300;
+  text-align: center;
+  margin-left: 45px;
+  margin-right: 45px;
+}
 a:link {
   text-decoration: none;
-  color: #969696;
-  font-family: 'Cabin', sans-serif;
+  color: #696969;
+  font-family: 'Roboto', sans-serif;
   font-size: 12px;
   display: inline-block;
   letter-spacing: 2px;
-  font-weight: 400;
+  font-weight: 300;
 }
 a:visited {
   text-decoration: none;
-  color: #969696;
+  color: #696969;
 }
 a:hover {
   text-decoration: none;
   color: black;
 }
-/* ---------------------------------------------------------------------- */
-/* ----------------------------last update------------------------------- */
-.footer {
-  position: relative;
-  text-align: center;
-  width: 100%;
-  /* display: block; */
-  /* padding-right: 10px; */
-  margin-right: auto;
-  margin-left: auto;
-  bottom: 20px;
+/* --------------------------Portfolio-------------------------------- */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+  max-width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
 }
-/* ---------------------------------------------------------------------- */
-/* ------------------------------favicon--------------------------------- */
 
-img {
-  text-align: center;
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 50%;
+  max-width: 50%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
 }

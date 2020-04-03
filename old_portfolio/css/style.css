@@ -1,0 +1,229 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #efefef;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+/* ---------------------------------------------------------------------- */
+/* --------------------------background image---------------------------- */
+
+.backgroundImage {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-size: 0;
+}
+
+.backgroundImageMobile {
+  display: none;
+}
+
+.backgroundImageTablet {
+  display: none;
+}
+
+.backgroundImageTabletVertical {
+  display: none;
+}
+
+/* ---------------------------------------------------------------------- */
+/* ---------------------background image overlay------------------------- */
+
+
+/* ---------------------------------------------------------------------- */
+/* -------------------------------header--------------------------------- */
+
+.row {
+  background-color: #efefef;
+}
+.row h1:hover {
+  color: black;
+}
+.column {
+  float: left;
+  padding: 20px;
+}
+.left {
+  text-align: right;
+  width: 45%;
+  padding: 3px;
+}
+.right {
+  text-align: left;
+  width: 45%;
+  padding: 3px;
+}
+.middle {
+  text-align: center;
+  width: 10%;
+  padding: 10px;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* ---------------------------------------------------------------------- */
+/* -------------------------dropdown menu-------------------------------- */
+
+.dropbtn {
+  color: white;
+  padding: 14px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  background-color: #efefef;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  float: right;
+  display: none;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  padding: 12px 16px;
+  display: block;
+}
+
+/* .dropdown-content a:hover {} */
+.dropdown:hover .dropdown-content {display: block;}
+/* .dropdown:hover .dropbtn {} */
+
+
+
+/* ---------------------------------------------------------------------- */
+/* --------------------------------text---------------------------------- */
+
+h1 {
+  color: #cccccc;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 16px;
+  display: inline-block;
+  letter-spacing: 5px;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  text-align: center;
+  padding: 10px 300px;
+  position: absolute;
+  top: 75%;
+  left: 0px;
+  color: black;
+}
+
+a:link {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  color: blue;
+}
+
+/* .paragraph {
+  background-color: white;
+  color: #7a7a7a;
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+} */
+
+/* .text {
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  color: black;
+} */
+
+/* ---------------------------------------------------------------------- */
+/* --------------------------------footer-------------------------------- */
+.footer {
+  background-color: #dbdbdb;
+  text-align: center;
+  padding: 10px;
+}
+
+/* ---------------------------------------------------------------------- */
+/* -------------if screen width is less than 600px----------------------- */
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+  .left {
+    display: none;
+  }
+  .right {
+    display: none;
+  }
+  .middle {
+    width: 100%;
+  }
+  .dropdown {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .backgroundImage {
+    display: none;
+  }
+
+  .backgroundImageMobile {
+    display: grid;
+    height: 100%;
+    width: 100%;
+  }
+
+  p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    color: black;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    text-align: center;
+    padding: 10px 20px;
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    color: black;
+  }
+}
+/* ---------------------------------------------------------------------- */
+/* ------------------------------favicon--------------------------------- */
+
+img {
+  text-align: center;
+}
