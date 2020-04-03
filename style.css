@@ -10,6 +10,7 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  z-index: -1;
 }
 
 canvas {
@@ -129,13 +130,15 @@ a:hover {
   color: black;
 }
 /* --------------------------Portfolio-------------------------------- */
+
 .row {
   display: flex;
   flex-wrap: wrap;
   padding: 0 4px;
-  max-width: 50%;
-  margin-left: 25%;
-  margin-right: 25%;
+  /* originally width: 50%, margin left and right: 25% */
+  max-width: 30%;
+  margin-left: 35%;
+  margin-right: 35%;
 }
 
 /* Create four equal columns that sits next to each other */
