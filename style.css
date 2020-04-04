@@ -50,8 +50,8 @@ canvas {
 }
 .homepage_text {
   text-align: center;
-  padding-left: 30%;
-  padding-right: 30%;
+  padding-left: 35%;
+  padding-right: 35%;
 }
 .footer {
   position: static;
@@ -60,6 +60,12 @@ canvas {
   margin-right: auto;
   margin-left: auto;
   bottom: 20px;
+}
+.cv {
+  text-align: left;
+  width: 30%;
+  margin-right: 35%;
+  margin-left: 35%;
 }
 .empty {
   padding: 2em;
@@ -78,7 +84,6 @@ h1 {
   font-weight: 100;
   text-align: center;
 }
-
 h2 {
   color: #696969;
   font-family: 'Roboto', sans-serif;
@@ -87,8 +92,8 @@ h2 {
   letter-spacing: 2px;
   font-weight: 300;
   text-align: center;
-  margin-left: 45px;
-  margin-right: 45px;
+  margin-left: 16px;
+  margin-right: 16px;
 }
 h3 {
   color: #696969;
@@ -111,6 +116,26 @@ h4 {
   text-align: center;
   margin-left: 45px;
   margin-right: 45px;
+}
+h5 {
+  color: #696969;
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  display: block;
+  letter-spacing: 2px;
+  font-weight: 300;
+  text-align: left;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+h6 {
+  color: blue;
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  display: block;
+  letter-spacing: 2px;
+  font-weight: 300;
+  text-align: left;
 }
 a:link {
   text-decoration: none;
