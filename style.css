@@ -205,6 +205,12 @@ a:hover {
     padding-left: 5%;
     padding-right: 5%;
   }
+  .cv {
+    text-align: left;
+    width: 60%;
+    margin-right: 20%;
+    margin-left: 20%;
+  }
 }
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
@@ -232,5 +238,11 @@ a:hover {
     text-align: center;
     padding-left: 3%;
     padding-right: 3%;
+  }
+  .cv {
+    text-align: left;
+    width: 94%;
+    margin-right: 3%;
+    margin-left: 3%;
   }
 }
