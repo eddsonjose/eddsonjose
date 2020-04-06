@@ -4,7 +4,9 @@
     -ms-box-sizing: border-box;
         box-sizing: border-box;
 }
-
+html, body {
+  height: 100%;
+}
 body {
   background-color: #ebebeb;
   margin: 0;
@@ -12,13 +14,19 @@ body {
   overflow-x: hidden;
   z-index: -1;
 }
-
 canvas {
   margin: 0;
   position: absolute;
   top: 0%;
   left: 0%;
   z-index: -1;
+}
+.scroller {
+  width: 100%;
+  height: inherit;
+  overflow-y: scroll;
+  scrollbar-color: #696969 #ebebeb;
+  scrollbar-width: thin;
 }
 /* ---------------------------------------------------------------------- */
 /* ---------------------------header & footer---------------------------- */
