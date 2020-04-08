@@ -27,7 +27,7 @@ canvas {
   width: 100%;
   height: inherit;
   overflow-y: scroll;
-  scrollbar-color: #696969 #ebebeb;
+  scrollbar-color: #bdbdbd #ebebeb;
   scrollbar-width: thin;
 }
 /* ---------------------------------------------------------------------- */
@@ -41,7 +41,7 @@ canvas {
 }
 .scroller::-webkit-scrollbar-thumb:vertical {
     height: 30px;
-    background-color: #696969;
+    background-color: #bdbdbd;
 }
 /* ---------------------------------------------------------------------- */
 /* ---------------------------header & footer---------------------------- */
