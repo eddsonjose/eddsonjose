@@ -333,6 +333,12 @@ a:hover {
     grid-template-columns: auto auto ;
     background-color: #ebebeb;
   }
+  .grid-item2 {
+    background-color: #ebebeb;
+    border: 0px solid #ebebeb;
+    text-align: left;
+    height: 70px;
+  }
 }
 
 /* --------------------------------------------------------------------- */
@@ -374,5 +380,11 @@ a:hover {
     width: 100%;
     grid-template-columns: 1fr auto ;
     background-color: #ebebeb;
+  }
+  .grid-item2 {
+    background-color: #ebebeb;
+    border: 0px solid #ebebeb;
+    text-align: left;
+    height: 80px;
   }
 }
