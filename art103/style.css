@@ -1,0 +1,443 @@
+* {
+  -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+        box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #090909;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  z-index: -1;
+}
+canvas {
+  margin: 0;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  z-index: -1;
+}
+/* ---------------------------------------------------------------------- */
+/* --------------------------firefox scrollbar--------------------------- */
+.scroller {
+  width: 100%;
+  height: inherit;
+  overflow-y: scroll;
+  scrollbar-color: #232323 #050505;
+  scrollbar-width: thin;
+}
+/* ---------------------------------------------------------------------- */
+/* --------------------------chrome scrollbar---------------------------- */
+.scroller::-webkit-scrollbar {
+    width: 5px;
+    height: 15px;
+}
+.scroller::-webkit-scrollbar-track-piece  {
+    background-color: #050505;
+}
+.scroller::-webkit-scrollbar-thumb:vertical {
+    height: 30px;
+    background-color: #232323;
+}
+/* ---------------------------------------------------------------------- */
+/* ---------------------------header & footer---------------------------- */
+
+/* .row {
+  background-color: #efefef;
+} */
+.center_column {
+  text-align: center;
+  flex: 1 0 auto;
+}
+.center_column h1:hover {
+  color: white;
+}
+.center_column h2:hover {
+  color: white;
+}
+.header_main_link {
+  text-align: center;
+}
+.header_sub_link {
+  text-align: center;
+}
+.homepage_image {
+  text-align: center;
+  width: 50%;
+  padding: 2em;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+.homepage_text {
+  text-align: left;
+  padding-left: 35%;
+  padding-right: 35%;
+}
+.footer {
+  /* position: static; */
+  text-align: center;
+  /* width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  bottom: 20px; */
+  padding-bottom: 2em;
+  flex-shrink: 0;
+}
+.cv {
+  text-align: left;
+  width: 30%;
+  margin-right: 35%;
+  margin-left: 35%;
+}
+.empty {
+  padding: 2em;
+}
+img {
+  text-align: center;
+  width: 100%;
+  padding-left: 0em;
+}
+h1 {
+  color: white;
+  font-family: 'Inter', sans-serif;
+  font-size: 36px;
+  display: block;
+  letter-spacing: 8px;
+  font-weight: 400;
+  text-align: center;
+  padding-top: 1em;
+}
+h2 {
+  color: #afafaf;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  display: block;
+  letter-spacing: 2px;
+  font-weight: 300;
+  text-align: center;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+h3 {
+  color: #afafaf;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  display: block;
+  letter-spacing: 2px;
+  font-weight: 400;
+  text-align: left;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+h4 {
+  color: blue;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  display: block;
+  letter-spacing: 2px;
+  font-weight: 300;
+  text-align: left;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+h5 {
+  color: #afafaf;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  display: block;
+  letter-spacing: 1px;
+  font-weight: 300;
+  text-align: left;
+  text-align: justify;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+h6 {
+  color: #445cfc;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  display: block;
+  letter-spacing: 2px;
+  font-weight: 300;
+  text-align: left;
+}
+h7 {
+  color: white;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  display: block;
+  letter-spacing: 2px;
+  font-weight: 500;
+  text-align: center;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+a:link {
+  text-decoration: none;
+  color: #afafaf;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  display: inline-block;
+  letter-spacing: 2px;
+  font-weight: 300;
+}
+a:visited {
+  text-decoration: none;
+  color: #afafaf;
+}
+a:hover {
+  text-decoration: none;
+  color: white;
+}
+/* --------------------------Portfolio-------------------------------- */
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 1px;
+  /* originally width: 50%, margin left and right: 25% */
+  max-width: 80%;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 15%;
+  max-width: 100%;
+  padding: 0 2px;
+}
+
+.column img {
+  margin-top: 3px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* --------------------------Grid for CV-------------------------------- */
+
+.grid-container {
+  display: grid;
+  width: 100%;
+  grid-template-columns: auto auto;
+  background-color: #090909;
+}
+.grid-item {
+  background-color: #090909;
+  border: 0px solid #090909;
+  text-align: left;
+  height: 180px;
+}
+.grid-item2 {
+  background-color: #090909;
+  border: 0px solid #090909;
+  text-align: left;
+  height: 80px;
+}
+.grid-item3 {
+  background-color: #090909;
+  border: 0px solid #090909;
+  text-align: left;
+  height: 45px;
+}
+.grid-item4 {
+  background-color: #090909;
+  border: 0px solid #090909;
+  text-align: left;
+  height: 65px;
+}
+
+/* --------------------------------------------------------------------- */
+/* Responsive layout - makes a two column-layout instead of four columns */
+/* --------------------------------------------------------------------- */
+@media screen and (max-width: 1200px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+    max-width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .homepage_image {
+    width: 90%;
+    text-align: center;
+    padding: 0em;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .homepage_text {
+    text-align: center;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .cv {
+    text-align: left;
+    width: 60%;
+    margin-right: 20%;
+    margin-left: 20%;
+  }
+  .grid-container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: auto auto ;
+    background-color: #090909;
+  }
+}
+
+/* --------------------------------------------------------------------- */
+/* Responsive layout - makes a two column-layout instead of four columns */
+/* --------------------------------------------------------------------- */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+    max-width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .homepage_image {
+    width: 90%;
+    text-align: center;
+    padding: 0em;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .homepage_text {
+    text-align: center;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .cv {
+    text-align: left;
+    width: 80%;
+    margin-right: 10%;
+    margin-left: 10%;
+  }
+  .grid-container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: auto auto ;
+    background-color: #090909;
+  }
+  .grid-item2 {
+    background-color: #090909;
+    border: 0px solid #090909;
+    text-align: left;
+    height: 70px;
+  }
+  h1 {
+    font-size: 32px;
+    font-weight: 200;
+  }
+  h2 {
+    font-size: 12px;
+  }
+  h3 {
+    font-size: 12px;
+  }
+  h4 {
+    font-size: 12px;
+  }
+  h5 {
+    font-size: 12px;
+  }
+  h6 {
+    font-size: 12px;
+  }
+  h7 {
+    font-size: 12px;
+  }
+}
+
+/* --------------------------------------------------------------------- */
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+/* --------------------------------------------------------------------- */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+    max-width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .homepage_image {
+    width: 90%;
+    text-align: center;
+    padding: 0em;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .homepage_text {
+    text-align: center;
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+  .cv {
+    text-align: left;
+    width: 94%;
+    margin-right: 3%;
+    margin-left: 3%;
+  }
+  .grid-container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr auto ;
+    background-color: #090909;
+  }
+  .grid-item2 {
+    background-color: #090909;
+    border: 0px solid #090909;
+    text-align: left;
+    height: 80px;
+  }
+  .grid-item4 {
+    background-color: #090909;
+    border: 0px solid #090909;
+    text-align: left;
+    height: 90px;
+  }
+  h1 {
+    font-size: 32px;
+    font-weight: 200;
+    letter-spacing: 5px;
+  }
+  h2 {
+    font-size: 12px;
+  }
+  h3 {
+    font-size: 12px;
+  }
+  h4 {
+    font-size: 12px;
+  }
+  h5 {
+    font-size: 12px;
+  }
+  h6 {
+    font-size: 12px;
+  }
+  h7 {
+    font-size: 12px;
+  }
+}
