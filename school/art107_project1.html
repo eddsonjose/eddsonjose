@@ -22,6 +22,7 @@
         <a-asset-item id="forest_mtl" src="https://cdn.glitch.com/7934f4ab-6ef5-46da-9bef-dfb4da78bda4%2Fforest.mtl?v=1601328067430"></a-asset-item>
         <img id="skyTexture" src="https://cdn.aframe.io/a-painter/images/sky.jpg">
         <!-- Creating Stars -->
+        <!-- include myFunction in geometry radius for random values, need to fix for decimals -->
         <a-mixin id="voxel"
            geometry="primitive: sphere; radius: 0.1;"
            material="shader: standard; emissive: #ffffff;"
@@ -58,10 +59,18 @@
       <a-camera look-controls="pointerLockEnabled: true" position="0 2.5 0">
         <a-cursor
           intersection-spawn="event: click; mixin: voxel;"
-          geometry="primitive: ring; radiusInner: 0.001; radiusOuter: 0.002;"
+          geometry="primitive: ring; radiusInner: 0.003; radiusOuter: 0.005;"
           material="color: white; shader: flat;">
         </a-cursor>
       </a-camera>
     </a-scene>
+
+    <!-- fix this to allow for decimals -->
+    <script>
+      function myFunction() {
+        document.getElementById("demo").innerHTML = Math.random(0.1, 0.4);
+      }
+    </script>
+
   </body>
 </html>
