@@ -1,0 +1,67 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Art 107 Project 1</title>
+    <meta name="description" content="Project 1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-teleport-controls@0.2.0/dist/aframe-teleport-controls.min.js"></script>
+    <script src="https://unpkg.com/aframe-controller-cursor-component@0.2.2/dist/aframe-controller-cursor-component.min.js"></script>
+    <script src="https://rawgit.com/dmarcos/aframe-motion-capture/master/dist/aframe-motion-capture.min.js"></script>
+    <script src="https://unpkg.com/aframe-extras.ocean@3.13.1/dist/aframe-extras.ocean.min.js"></script>
+    <script src="components/intersection-spawn.js"></script>
+    <script src="components/random-color.js"></script>
+    <script src="components/snap.js"></script>
+  </head>
+  <body>
+    <a-scene avatar-recorder fog="type: linear; color: #3968ba; far: 150; near: 0">
+      <a-assets>
+        <a-asset-item id="city_obj" src="https://cdn.glitch.com/7934f4ab-6ef5-46da-9bef-dfb4da78bda4%2Fcity.obj?v=1601284098565"></a-asset-item>
+        <a-asset-item id="city_mtl" src="https://cdn.glitch.com/7934f4ab-6ef5-46da-9bef-dfb4da78bda4%2Fcity.mtl?v=1601284088878"></a-asset-item>
+        <a-asset-item id="forest_obj" src="https://cdn.glitch.com/7934f4ab-6ef5-46da-9bef-dfb4da78bda4%2Fforest.obj?v=1601328079673"></a-asset-item>
+        <a-asset-item id="forest_mtl" src="https://cdn.glitch.com/7934f4ab-6ef5-46da-9bef-dfb4da78bda4%2Fforest.mtl?v=1601328067430"></a-asset-item>
+        <img id="skyTexture" src="https://cdn.aframe.io/a-painter/images/sky.jpg">
+        <!-- Creating Stars -->
+        <a-mixin id="voxel"
+           geometry="primitive: sphere; radius: 0.1;"
+           material="shader: standard; emissive: #ffffff;"
+           snap="offset: 0.25 0.25 0.25; snap: 0.5 0.5 0.5"
+        ></a-mixin>
+      </a-assets>
+
+      <!-- Introduction -->
+      <a-text value="ARTIFICIAL IS NATURAL" align="center" width="4" position="0 2.5 -2;"></a-text>
+      <a-text value="click to make stars" align="center" width="4" position="0 2.3 -2;" color="grey"></a-text>
+
+      <a-entity geometry-merger="preserveOriginal: false" material="color: #AAA">
+        <a-sky id="bg" radius="90" src="https://cdn.glitch.com/7934f4ab-6ef5-46da-9bef-dfb4da78bda4%2Fsky.png?v=1601284102041" rotation="0 -90" theta-length="180"></a-sky>
+        <a-light intensity="5" position="0 10 0" rotation="0 0"></a-light>
+        <a-light type="ambient" intensity="0.5" position="0 43 -80" rotation="0 90" color="#3968ba"></a-light>
+        <a-obj-model src="#city_obj" mtl="#city_mtl" rotation="0 270 0" position="50 0 0" scale="1 1 1"></a-obj-model>
+        <a-obj-model src="#forest_obj" mtl="#forest_mtl" rotation="0 270 0" position="-50 0 0" scale="1 1 1"></a-obj-model>
+        <a-ocean width="400" depth="400" density="80" speed="0.01" position="0 0 0" rotation="-90" color="#000000" scale visible ocean></a-ocean>
+      </a-entity>
+
+      <!-- Hands. -->
+      <a-entity id="teleHand"
+        hand-controls="left"
+        teleport-controls="type: parabolic; collisionEntities: [mixin='voxel'], #bg"
+      ></a-entity>
+
+      <a-entity id="blockHand"
+        hand-controls="right"
+        controller-cursor
+        intersection-spawn="event: click; mixin: voxel"
+      ></a-entity>
+
+      <!-- Camera. -->
+      <a-camera look-controls="pointerLockEnabled: true" position="0 2.5 0">
+        <a-cursor
+          intersection-spawn="event: click; mixin: voxel;"
+          geometry="primitive: ring; radiusInner: 0.001; radiusOuter: 0.002;"
+          material="color: white; shader: flat;">
+        </a-cursor>
+      </a-camera>
+    </a-scene>
+  </body>
+</html>
