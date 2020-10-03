@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <title>Art 107 Project 1</title>
@@ -14,56 +15,64 @@
     <script src="components/snap.js"></script>
   </head>
   <body>
-    <a-scene avatar-recorder fog="type: linear; color: #3968ba; far: 150; near: 0">
-      <a-assets>
-        <a-asset-item id="city_obj" src="https://cdn.glitch.com/7934f4ab-6ef5-46da-9bef-dfb4da78bda4%2Fcity.obj?v=1601284098565"></a-asset-item>
-        <a-asset-item id="city_mtl" src="https://cdn.glitch.com/7934f4ab-6ef5-46da-9bef-dfb4da78bda4%2Fcity.mtl?v=1601284088878"></a-asset-item>
-        <a-asset-item id="forest_obj" src="https://cdn.glitch.com/7934f4ab-6ef5-46da-9bef-dfb4da78bda4%2Fforest.obj?v=1601328079673"></a-asset-item>
-        <a-asset-item id="forest_mtl" src="https://cdn.glitch.com/7934f4ab-6ef5-46da-9bef-dfb4da78bda4%2Fforest.mtl?v=1601328067430"></a-asset-item>
-        <img id="skyTexture" src="https://cdn.aframe.io/a-painter/images/sky.jpg">
-        <!-- Creating Stars -->
-        <!-- include myFunction in geometry radius for random values, need to fix for decimals -->
-        <a-mixin id="voxel"
-           geometry="primitive: sphere; radius: 0.1;"
-           material="shader: standard; emissive: #ffffff;"
-           snap="offset: 0.25 0.25 0.25; snap: 0.5 0.5 0.5"
-        ></a-mixin>
-      </a-assets>
 
-      <!-- Introduction -->
-      <a-text value="ARTIFICIAL IS NATURAL" align="center" width="4" position="0 2.5 -2;"></a-text>
-      <a-text value="click to make stars" align="center" width="4" position="0 2.3 -2;" color="grey"></a-text>
+    <div class="frame">
+      <a-scene avatar-recorder fog="type: linear; color: #3968ba; far: 150; near: 0" embedded>
+        <a-assets>
+          <a-asset-item id="city_obj" src="https://cdn.glitch.com/7934f4ab-6ef5-46da-9bef-dfb4da78bda4%2Fcity.obj?v=1601284098565"></a-asset-item>
+          <a-asset-item id="city_mtl" src="https://cdn.glitch.com/7934f4ab-6ef5-46da-9bef-dfb4da78bda4%2Fcity.mtl?v=1601284088878"></a-asset-item>
+          <a-asset-item id="forest_obj" src="https://cdn.glitch.com/7934f4ab-6ef5-46da-9bef-dfb4da78bda4%2Fforest.obj?v=1601328079673"></a-asset-item>
+          <a-asset-item id="forest_mtl" src="https://cdn.glitch.com/7934f4ab-6ef5-46da-9bef-dfb4da78bda4%2Fforest.mtl?v=1601328067430"></a-asset-item>
+          <img id="skyTexture" src="https://cdn.aframe.io/a-painter/images/sky.jpg">
+          <!-- Creating Stars -->
+          <!-- include myFunction in geometry radius for random values, need to fix for decimals -->
+          <a-mixin id="voxel"
+             geometry="primitive: sphere; radius: 0.15;"
+             material="shader: standard; emissive: #ffffff;"
+             snap="offset: 0.25 0.25 0.25; snap: 0.5 0.5 0.5"
+          ></a-mixin>
+        </a-assets>
 
-      <a-entity geometry-merger="preserveOriginal: false" material="color: #AAA">
-        <a-sky id="bg" radius="90" src="https://cdn.glitch.com/7934f4ab-6ef5-46da-9bef-dfb4da78bda4%2Fsky.png?v=1601284102041" rotation="0 -90" theta-length="180"></a-sky>
-        <a-light intensity="5" position="0 10 0" rotation="0 0"></a-light>
-        <a-light type="ambient" intensity="0.5" position="0 43 -80" rotation="0 90" color="#3968ba"></a-light>
-        <a-obj-model src="#city_obj" mtl="#city_mtl" rotation="0 270 0" position="50 0 0" scale="1 1 1"></a-obj-model>
-        <a-obj-model src="#forest_obj" mtl="#forest_mtl" rotation="0 270 0" position="-50 0 0" scale="1 1 1"></a-obj-model>
-        <a-ocean width="400" depth="400" density="80" speed="0.01" position="0 0 0" rotation="-90" color="#000000" scale visible ocean></a-ocean>
-      </a-entity>
+        <!-- Introduction -->
+        <a-text value="ARTIFICIAL IS NATURAL" align="center" width="4" position="0 2.5 -2;"></a-text>
+        <a-text value="click to make stars" align="center" width="4" position="0 2.3 -2;" color="#838384"></a-text>
 
-      <!-- Hands. -->
-      <a-entity id="teleHand"
-        hand-controls="left"
-        teleport-controls="type: parabolic; collisionEntities: [mixin='voxel'], #bg"
-      ></a-entity>
+        <a-entity geometry-merger="preserveOriginal: false" material="color: #AAA">
+          <a-sky id="bg" radius="90" src="https://cdn.glitch.com/7934f4ab-6ef5-46da-9bef-dfb4da78bda4%2Fsky.png?v=1601284102041" rotation="0 -90" theta-length="180"></a-sky>
+          <a-light intensity="5" position="0 10 0" rotation="0 0"></a-light>
+          <a-light type="ambient" intensity="0.5" position="0 43 -80" rotation="0 90" color="#3968ba"></a-light>
+          <a-obj-model src="#city_obj" mtl="#city_mtl" rotation="0 270 0" position="50 0 0" scale="1 1 1"></a-obj-model>
+          <a-obj-model src="#forest_obj" mtl="#forest_mtl" rotation="0 270 0" position="-50 0 0" scale="1 1 1"></a-obj-model>
+          <a-ocean width="400" depth="400" density="80" speed="0.01" position="0 0 0" rotation="-90" color="#000000" scale visible ocean></a-ocean>
+        </a-entity>
 
-      <a-entity id="blockHand"
-        hand-controls="right"
-        controller-cursor
-        intersection-spawn="event: click; mixin: voxel"
-      ></a-entity>
+        <!-- Hands. -->
+        <a-entity id="teleHand"
+          hand-controls="left"
+          teleport-controls="type: parabolic; collisionEntities: [mixin='voxel'], #bg"
+        ></a-entity>
 
-      <!-- Camera. -->
-      <a-camera look-controls="pointerLockEnabled: true" position="0 2.5 0">
-        <a-cursor
-          intersection-spawn="event: click; mixin: voxel;"
-          geometry="primitive: ring; radiusInner: 0.003; radiusOuter: 0.005;"
-          material="color: white; shader: flat;">
-        </a-cursor>
-      </a-camera>
-    </a-scene>
+        <a-entity id="blockHand"
+          hand-controls="right"
+          controller-cursor
+          intersection-spawn="event: click; mixin: voxel"
+        ></a-entity>
+
+        <!-- Camera. -->
+        <a-camera look-controls="pointerLockEnabled: true" position="0 2.5 0">
+          <a-cursor
+            intersection-spawn="event: click; mixin: voxel;"
+            geometry="primitive: ring; radiusInner: 0.003; radiusOuter: 0.005;"
+            material="color: white; shader: flat;">
+          </a-cursor>
+        </a-camera>
+      </a-scene>
+    </div>
+    <div class="description">
+      <h1>PROJECT 1</h1>
+      <h2>Eddson Jose</h2>
+      <p>Carl Sagan's quote, "we are all made of star stuff" has been an underlying bases for my work. My most recent work incorporates Sagan's quote in a manner of visual comparisons between nature and the artificial. Two entities seemingly opposite from one another yet both are made of the same things. However, the comparisons between the two entities was formed from the human mind which is represented by the viewer themselves. My work incorporates the viewer as a light source or a star to depict the creationist idea of the star and the terminology of nature and the artificial.</p>
+    </div>
 
     <!-- fix this to allow for decimals -->
     <script>
