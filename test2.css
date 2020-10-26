@@ -65,28 +65,27 @@ body {
   color: #ffffff;
   background-color:#44529b;
 }
-/* ---------------------------------------------------------------------- */
 /* ---------------------------------main--------------------------------- */
 .main {
-  text-align: center;
+  width:100%;
   flex: 1 0 auto;
 }
-.column {
+.columnLeft {
   flex: 15%;
-  max-width: 100%;
-  /* padding: 0 2px; */
+  max-width: 50%;
 }
-.column .left {
+.columnRight {
+  flex: 15%;
+  max-width: 50%;
+}
+ .columnLeft .left {
   text-align:left;
+  margin:0px;
   padding:15%;
   background-color:white;
-  /* padding-left:15%;
-  padding-right:15%; */
 }
-.column .right {
+ .columnRight .right {
   text-align:right;
-  width:100%;
-  bottom:0px;
   margin:0px;
   padding:15%;
 }
@@ -110,7 +109,6 @@ iframe {
   height:40vh;
   overflow:hidden;
 }
-/* ---------------------------------------------------------------------- */
 /* ---------------------------------other-------------------------------- */
 h1 {
   color: black;
@@ -138,7 +136,7 @@ h3{
   display: contents;
 }
 h4 {
-  color: #ffffff;
+  color: black;
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   letter-spacing: 1px;
@@ -156,15 +154,13 @@ a {
 a:link, a:visited, a:hover {
   text-decoration: none;
 }
-/* ---------------------------------------------------------------------- */
 /* -------------------------------responsive----------------------------- */
 @media (max-width: 1920px) {
-  .column .left {
+  .columnLeft .left {
     padding:10%;
-    /* padding-left:3%;
-    padding-right:3%; */
+    margin:0px;
   }
-  .column .right {
+  .columnRight .right {
     padding:10%;
     margin:0px;
   }
@@ -201,12 +197,37 @@ a:link, a:visited, a:hover {
 
 }
 @media (max-width: 800px) {
+  .columnLeft .left {
+    padding:6%;
+  }
+  .columnRight .right {
+    padding:6%;
+  }
+  .columnLeft {
+    max-width: 60%;
+  }
+  .columnRight {
+    max-width:40%;
+  }
   .row {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0 1px;
+    max-width:94%;
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+}
+@media (max-width: 560px) {
+  .columnLeft .left {
+    padding:8%;
+  }
+  .columnLeft {
     max-width: 100%;
-    margin-left: 0%;
-    margin-right: 0%;
+  }
+  .columnRight {
+    display:none;
+  }
+  .row {
+    max-width:98%;
+    margin-left: 1%;
+    margin-right: 1%;
   }
 }
