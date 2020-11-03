@@ -10,7 +10,7 @@ html, body {
 body {
   display: flex;
   flex-direction: column;
-  background-color: #090909;
+  background-color: #fafafa;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -29,7 +29,7 @@ canvas {
   width: 100%;
   height: inherit;
   overflow-y: scroll;
-  scrollbar-color: #232323 #050505;
+  scrollbar-color: #d1d1d1 #fafafa;
   scrollbar-width: thin;
 }
 /* ---------------------------------------------------------------------- */
@@ -39,11 +39,11 @@ canvas {
     height: 15px;
 }
 .scroller::-webkit-scrollbar-track-piece  {
-    background-color: #050505;
+    background-color: #fafafa;
 }
 .scroller::-webkit-scrollbar-thumb:vertical {
     height: 30px;
-    background-color: #232323;
+    background-color: #d1d1d1;
 }
 /* ---------------------------------------------------------------------- */
 /* ---------------------------header & footer---------------------------- */
@@ -55,12 +55,12 @@ canvas {
   text-align: center;
   flex: 1 0 auto;
 }
-.center_column h1:hover {
+/* .center_column h1:hover {
   color: white;
 }
 .center_column h2:hover {
   color: white;
-}
+} */
 .header_main_link {
   text-align: center;
 }
@@ -80,12 +80,7 @@ canvas {
   padding-right: 35%;
 }
 .footer {
-  /* position: static; */
   text-align: center;
-  /* width: 100%;
-  margin-right: auto;
-  margin-left: auto;
-  bottom: 20px; */
   padding-bottom: 2em;
   flex-shrink: 0;
 }
@@ -103,97 +98,70 @@ img {
   width: 100%;
   padding-left: 0em;
 }
+h1, h2, h3, h4, h5, h6, h7 {
+  color:black;
+  font-family: 'Montserrat', sans-serif;
+}
+h3, h4, h5, h6, h7 {
+  font-size: 16px;
+  font-weight: 300;
+}
 h1 {
-  color: white;
-  font-family: 'Inter', sans-serif;
-  font-size: 36px;
-  display: block;
-  letter-spacing: 8px;
-  font-weight: 400;
-  text-align: center;
-  padding-top: 1em;
+  font-size: 48px;
+  letter-spacing: 0px;
+  font-weight: 200;
+  margin:0;
+  display: inline;
 }
 h2 {
-  color: #afafaf;
-  font-family: 'Inter', sans-serif;
-  font-size: 16px;
-  display: block;
-  letter-spacing: 2px;
+  font-size: 14px;
+  letter-spacing: 1px;
   font-weight: 300;
-  text-align: center;
-  margin-left: 5px;
-  margin-right: 5px;
+  display: inline;
 }
 h3 {
-  color: #424242;
-  font-family: 'Inter', sans-serif;
-  font-size: 16px;
   display: block;
   letter-spacing: 2px;
-  font-weight: 400;
   text-align: left;
   margin-left: 16px;
   margin-right: 16px;
 }
 h4 {
-  color: blue;
-  font-family: 'Inter', sans-serif;
-  font-size: 16px;
   display: block;
   letter-spacing: 2px;
-  font-weight: 300;
   text-align: left;
   margin-left: 16px;
   margin-right: 16px;
 }
 h5 {
-  color: #afafaf;
-  font-family: 'Inter', sans-serif;
-  font-size: 16px;
   display: block;
   letter-spacing: 1px;
-  font-weight: 300;
   text-align: left;
   text-align: justify;
   margin-left: 16px;
   margin-right: 16px;
 }
 h6 {
-  color: #445cfc;
-  font-family: 'Inter', sans-serif;
-  font-size: 16px;
   display: block;
   letter-spacing: 2px;
-  font-weight: 300;
   text-align: left;
 }
 h7 {
-  color: white;
-  font-family: 'Inter', sans-serif;
-  font-size: 16px;
-  display: block;
-  letter-spacing: 2px;
-  font-weight: 500;
-  text-align: center;
-  margin-left: 5px;
-  margin-right: 5px;
+  letter-spacing: 1px;
+  display: inline;
 }
 a:link {
   text-decoration: none;
-  color: #afafaf;
-  font-family: 'Inter', sans-serif;
-  font-size: 16px;
   display: inline-block;
   letter-spacing: 2px;
-  font-weight: 300;
 }
 a:visited {
   text-decoration: none;
-  color: #afafaf;
+  color: black;
 }
 a:hover {
-  text-decoration: none;
-  color: white;
+  text-decoration: underline;
+  color: black;
 }
 /* --------------------------Portfolio-------------------------------- */
 
@@ -226,29 +194,29 @@ a:hover {
   display: grid;
   width: 100%;
   grid-template-columns: auto auto;
-  background-color: #090909;
+  background-color: #fafafa;
 }
 .grid-item {
-  background-color: #090909;
-  border: 0px solid #090909;
+  background-color: #fafafa;
+  border: 0px solid #fafafa;
   text-align: left;
   height: 180px;
 }
 .grid-item2 {
-  background-color: #090909;
-  border: 0px solid #090909;
+  background-color: #fafafa;
+  border: 0px solid #fafafa;
   text-align: left;
   height: 80px;
 }
 .grid-item3 {
-  background-color: #090909;
-  border: 0px solid #090909;
+  background-color: #fafafa;
+  border: 0px solid #fafafa;
   text-align: left;
   height: 45px;
 }
 .grid-item4 {
-  background-color: #090909;
-  border: 0px solid #090909;
+  background-color: #fafafa;
+  border: 0px solid #fafafa;
   text-align: left;
   height: 65px;
 }
