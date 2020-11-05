@@ -62,6 +62,7 @@ canvas {
   color: white;
 } */
 .header_main_link {
+  padding-top:1em;
   text-align: center;
 }
 .header_sub_link {
@@ -111,6 +112,7 @@ h1 {
   letter-spacing: 0px;
   font-weight: 200;
   margin:0;
+  padding:0;
   display: inline;
 }
 h2 {
@@ -224,6 +226,16 @@ a:hover {
 /* --------------------------------------------------------------------- */
 /* Responsive layout - makes a two column-layout instead of four columns */
 /* --------------------------------------------------------------------- */
+@media screen and (max-width: 1920px) {
+  .homepage_image {
+    text-align: center;
+    width: 70%;
+    padding: 0 0 1em 0;
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+}
+
 @media screen and (max-width: 1200px) {
   .column {
     flex: 100%;
@@ -310,7 +322,7 @@ a:hover {
     height: 70px;
   }
   h1 {
-    font-size: 32px;
+    font-size: 36px;
     font-weight: 200;
   }
   h2 {
