@@ -53,7 +53,7 @@ canvas {
 } */
 .center_column {
   text-align: center;
-  flex: 1 0 auto;
+  flex: 1 1 auto;
   position:relative;
 }
 /* .center_column h1:hover {
@@ -82,7 +82,7 @@ canvas {
   padding-right: 35%;
 }
 .footer {
-  position: relative;
+  position: static;
   right:0px;
   bottom:0px;
   width:100%;
