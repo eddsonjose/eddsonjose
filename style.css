@@ -5,7 +5,7 @@
         box-sizing: border-box;
 }
 html, body {
-  min-height: 100vh;
+  min-height: 100%;
 }
 body {
   display: flex;
@@ -82,13 +82,11 @@ canvas {
   padding-right: 35%;
 }
 .footer {
-  position: relative;
+  /* position: relative; */
   width:100%;
-  /* text-align: center; */
+  text-align: center;
   padding-bottom: 2em;
-  /* flex-shrink: 0; */
-  flex: 0 0 50px;/*or just height:50px;*/
-  margin-top: auto;
+  flex-shrink: 0;
 }
 .cv {
   text-align: left;
