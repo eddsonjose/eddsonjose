@@ -81,6 +81,8 @@ canvas {
   padding-right: 35%;
 }
 .footer {
+  position:absolute;
+  bottom:0px;
   text-align: center;
   padding-bottom: 2em;
   flex-shrink: 0;
