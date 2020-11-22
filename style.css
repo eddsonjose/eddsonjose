@@ -82,6 +82,7 @@ canvas {
 }
 .footer {
   position:absolute;
+  right:0px;
   bottom:0px;
   width:100%;
   padding-left:20%;
