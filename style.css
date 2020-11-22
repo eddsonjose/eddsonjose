@@ -81,7 +81,7 @@ canvas {
   padding-right: 35%;
 }
 .footer {
-  position:absolute;
+  position: fixed;
   right:0px;
   bottom:0px;
   width:100%;
