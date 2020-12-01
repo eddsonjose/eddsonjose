@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Art 107 Project 3</title>
+    <meta name="description" content="Project 1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-teleport-controls@0.2.0/dist/aframe-teleport-controls.min.js"></script>
+    <script src="https://unpkg.com/aframe-controller-cursor-component@0.2.2/dist/aframe-controller-cursor-component.min.js"></script>
+    <script src="https://rawgit.com/dmarcos/aframe-motion-capture/master/dist/aframe-motion-capture.min.js"></script>
+    <script src="https://unpkg.com/aframe-extras.ocean@3.13.1/dist/aframe-extras.ocean.min.js"></script>
+    <script src="components/intersection-spawn.js"></script>
+    <script src="components/random-color.js"></script>
+    <script src="components/snap.js"></script>
+  </head>
+  <body>
+
+    <div class="frame">
+      <a-scene avatar-recorder embedded>
+        <a-assets>
+          <a-asset-item id="artificial_landscape" src="https://cdn.glitch.com/1280888c-cf75-4fe4-8de5-b0d6cdf29265%2Fartificial_landscape_2.gltf?v=1606806624287"></a-asset-item>
+          <a-asset-item id="tree_green" src="https://cdn.glitch.com/1280888c-cf75-4fe4-8de5-b0d6cdf29265%2Fblanket_tree_green.gltf?v=1606805230924"></a-asset-item>
+          <a-asset-item id="tree_blue" src="https://cdn.glitch.com/1280888c-cf75-4fe4-8de5-b0d6cdf29265%2Fblanket_tree_blue.gltf?v=1606805234257"></a-asset-item>
+          <a-asset-item id="tree_red" src="https://cdn.glitch.com/1280888c-cf75-4fe4-8de5-b0d6cdf29265%2Fblanket_tree_red.gltf?v=1606805227750"></a-asset-item>
+        </a-assets>
+
+        <!--       -----------------------------HILLS----------------------------- -->
+        <a-entity gltf-model="#artificial_landscape" material="fog:false" position="50 -8 -40" rotation="0 0 0" scale="120 120 120"></a-entity>
+        <a-entity gltf-model="#tree_red" material="fog:false" position="41 -20 40" rotation="0 0 0" scale="120 120 120"></a-entity>
+        <a-entity gltf-model="#tree_green" material="fog:false" position="40 -20 40" rotation="0 0 0" scale="120 120 120"></a-entity>
+        <a-entity gltf-model="#tree_blue" material="fog:false" position="39 -20 40" rotation="0 0 0" scale="120 120 120"></a-entity>
+
+        <!--       ------------------------------SKY------------------------------ -->
+        <a-sky color="#6EBAA7"></a-sky>
+
+
+        <!--       -----------------------------LIGHT----------------------------- -->
+        <a-light type="ambient" intensity="1.2" position="0 2 0" rotation="0 90" color="#ffffff"></a-light>
+        <a-light type="directional" intensity="2" position="0 2 0" rotation="0 90" color="#ffffff"></a-light>
+
+        <!--       ----------------------------CAMERA----------------------------- -->
+        <a-entity position="0 -1 300">
+          <a-camera wasd-controls-enabled="true" fov="50" look-controls="pointerLockEnabled: true" wasd-controls="acceleration: 2000; fly: false"></a-camera>
+        </a-entity>
+      </a-scene>
+    </div>
+    <!-- ----------------------------------------------------------------------- -->
+    <div class="description">
+      <h1>Blanket Term: Natural</h1>
+      <h2>Eddson Jose</h2>
+      <p>Natural, for all existing objects within the universe describes any and every object as a relative thing that occurs naturally within the universe. Natural, in the grand scale of the entirety of the human perception and beyond is more than the trees and mountains; it is life of any kind, elements that form into any object, metal that is formed by the appendage of any being, thoughts that form from electrical signals, electricity that dances behind red, green, and blue glass. </p>
+    </div>
+  </body>
+</html>
