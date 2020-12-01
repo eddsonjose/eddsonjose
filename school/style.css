@@ -5,10 +5,10 @@ body {
   margin: 2em;
 }
 
-h1 {
+/* h1 {
   font-style: italic;
   color: #373fff;
-}
+} */
 
 html, body {
   margin: 0;
@@ -22,7 +22,7 @@ html, body {
   padding-right: 25%;
   padding-top: 5%;
   width: 50%;
-  height: 720px;
+  height: 480px;
 }
 
 a-scene {
