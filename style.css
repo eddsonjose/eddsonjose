@@ -97,6 +97,9 @@ canvas {
 .empty {
   padding: 2em;
 }
+strong {
+  font-weight: 600;
+}
 img {
   text-align: center;
   width: 100%;
